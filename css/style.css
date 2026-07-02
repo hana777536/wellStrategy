@@ -713,6 +713,7 @@ footer .col > p {
     order: -1;
   }
   .hero__image img {
+    width: min(100%, 260px);
     height: auto;
   }
   .hero .card {
@@ -832,7 +833,6 @@ footer .col > p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
 }
 .about-founder .container .left .quote-card {
   background: #184b5d;
@@ -885,9 +885,7 @@ footer .col > p {
 }
 @media (max-width: 768px) {
   .about-founder .container .left .image-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 28px;
+    display: none;
   }
 }
 .about-founder .container .right .content-box {
@@ -1135,6 +1133,273 @@ footer .col > p {
   .skills .col p {
     font-size: 14px;
     line-height: 1.6;
+  }
+}
+
+.service-section {
+  background-color: #f8f7f4;
+  padding: 6rem 0;
+}
+.service-section .container {
+  width: 80%;
+  margin: 0 auto;
+}
+.service-section .service-card {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 18px 50px rgba(31, 78, 95, 0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-section .service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 60px rgba(31, 78, 95, 0.12);
+}
+.service-section .service-card .service-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-section .service-card .service-left .top {
+  margin-bottom: 2rem;
+}
+.service-section .service-card .service-left .top h2 {
+  color: #1f4e5f;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.service-section .service-card .service-left .top p {
+  color: #5f6468;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+.service-section .service-card .service-left .bottom {
+  padding-top: 2rem;
+  border-top: 2px solid #f0ede8;
+}
+.service-section .service-card .service-left .bottom span {
+  color: #6397ab;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.service-section .service-card .service-left .bottom h3 {
+  color: #1f4e5f;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+.service-section .service-card .service-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.service-section .service-card .service-right .description {
+  color: #5f6468;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin: 0;
+}
+.service-section .service-card .service-right h4 {
+  color: #1f4e5f;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.service-section .service-card .service-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.service-section .service-card .service-right ul li {
+  color: #5f6468;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.service-section .service-card .service-right ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background-color: #6397ab;
+  border-radius: 50%;
+}
+@media (max-width: 1024px) {
+  .service-section .service-card {
+    grid-template-columns: 1fr;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .service-section {
+    padding: 4rem 0;
+  }
+  .service-section .container {
+    width: 90%;
+  }
+  .service-section .service-card {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  .service-section .service-card .service-left .top {
+    margin-bottom: 1.5rem;
+  }
+  .service-section .service-card .service-left .top h2 {
+    font-size: 1.5rem;
+  }
+  .service-section .service-card .service-left .top p {
+    font-size: 0.95rem;
+  }
+  .service-section .service-card .service-left .bottom {
+    padding-top: 1.5rem;
+  }
+  .service-section .service-card .service-left .bottom h3 {
+    font-size: 1.3rem;
+  }
+  .service-section .service-card .service-right h4 {
+    font-size: 1rem;
+  }
+  .service-section .service-card .service-right ul li {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .service-section {
+    padding: 3rem 0;
+  }
+  .service-section .service-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .service-section .service-card .service-left .top h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+  .service-section .service-card .service-left .top p {
+    font-size: 0.9rem;
+  }
+  .service-section .service-card .service-left .bottom span {
+    font-size: 0.8rem;
+  }
+  .service-section .service-card .service-left .bottom h3 {
+    font-size: 1.1rem;
+  }
+  .service-section .service-card .service-right .description {
+    font-size: 0.9rem;
+  }
+  .service-section .service-card .service-right h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+  .service-section .service-card .service-right ul li {
+    font-size: 0.85rem;
+    padding-left: 1.2rem;
+  }
+}
+
+.reachOut {
+  background: linear-gradient(135deg, #1f4e5f 0%, #2d6a7f 100%);
+  padding: 4rem 70px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 4rem auto;
+  max-width: 90%;
+  width: 80%;
+  box-shadow: 0 18px 50px rgba(31, 78, 95, 0.15);
+}
+.reachOut h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.reachOut p {
+  font-size: 1.1rem;
+  color: #e8f0f4;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reachOut .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #6397ab;
+  color: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #6397ab;
+}
+.reachOut .btn:hover {
+  background-color: transparent;
+  color: #6397ab;
+  border-color: #6397ab;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 151, 171, 0.3);
+}
+@media (max-width: 768px) {
+  .reachOut {
+    padding: 3rem 2rem;
+    width: 90%;
+    margin: 3rem auto;
+  }
+  .reachOut h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  .reachOut p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .reachOut .btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  .reachOut {
+    padding: 2.5rem 1.5rem;
+    width: 95%;
+    margin: 2rem auto;
+  }
+  .reachOut h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .reachOut p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .reachOut .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
   }
 }
 
