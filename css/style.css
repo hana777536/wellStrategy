@@ -831,60 +831,55 @@ footer .col > p {
 }
 .about-founder .container .left {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
 }
-.about-founder .container .left .quote-card {
+.about-founder .container .quote-card {
+  width: 420px;
+  height: 540px;
   background: #184b5d;
-  color: white;
-  padding: 40px;
-  border-radius: 28px 16px 16px 28px;
+  color: #fff;
+  padding: 50px;
+  border-radius: 28px 0 0 28px;
+  display: flex;
+  flex-direction: column;
 }
-.about-founder .container .left .quote-card .quote-icon {
-  font-size: 90px;
-  line-height: 1;
+.about-founder .container .quote-card .quote-icon {
+  font-size: 60px;
   opacity: 0.2;
 }
-.about-founder .container .left .quote-card h2 {
-  margin-top: 10px;
-  font-weight: 600;
+.about-founder .container .quote-card h2 {
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 700;
+  flex: 1;
 }
-.about-founder .container .left .quote-card .author {
-  margin-top: 40px;
-}
-.about-founder .container .left .quote-card .author h3 {
+.about-founder .container .quote-card .author h3 {
+  font-size: 34px;
   margin-bottom: 8px;
-  font-size: 24px;
 }
-.about-founder .container .left .quote-card .author p {
-  color: #c4d2d8;
+.about-founder .container .quote-card .author p {
+  color: #c6d5db;
+  font-size: 22px;
 }
 @media (max-width: 768px) {
-  .about-founder .container .left .quote-card {
-    border-radius: 28px 28px 28px 28px;
-    padding: 30px;
-    font-size: 18px;
+  .about-founder .container .quote-card {
+    width: 100%;
+    margin: auto;
+    border-radius: 28px;
+    padding: 10px;
   }
 }
-@media (max-width: 480px) {
-  .about-founder .container .left .quote-card {
-    padding: 20px;
-    font-size: 16px;
-  }
-  .about-founder .container .left .quote-card .quote-icon {
-    font-size: 60px;
-  }
-  .about-founder .container .left .quote-card .author h3 {
-    font-size: 18px;
-  }
-}
-.about-founder .container .left .image-card img {
-  width: 310px;
+.about-founder .container .image-card img {
+  width: 300px;
   height: 540px;
+  object-fit: cover;
+  display: block;
   border-radius: 0 28px 28px 0;
 }
 @media (max-width: 768px) {
-  .about-founder .container .left .image-card img {
+  .about-founder .container .image-card img {
     display: none;
   }
 }
@@ -1419,6 +1414,10 @@ body {
   padding: 100px 0;
   text-align: center;
   color: #ffffff;
+}
+.demands h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .hub {
